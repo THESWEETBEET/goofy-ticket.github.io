@@ -1,0 +1,32 @@
+[
+  {
+    "id": "demo-1",
+    "title": "Goofy Ticket \u2014 Demo Video 1",
+    "image": "https://via.placeholder.com/640x360.png?text=Demo+1",
+    "description": "Demo item 1 \u2014 replace these entries with your real items.",
+    "detail_url": "https://thesweetbeet.github.io/goofy-ticket.github.io/demo-1",
+    "episodes": [
+      {
+        "title": "Episode 1",
+        "stream": "https://test-streams.mux.dev/x36xhzz/x36xhzz.m3u8",
+        "stream_url": "https://test-streams.mux.dev/x36xhzz/x36xhzz.m3u8"
+      }
+    ],
+    "source_file": "/mnt/data/main.dart.js"
+  },
+  {
+    "id": "demo-2",
+    "title": "Goofy Ticket \u2014 Demo Video 2",
+    "image": "https://via.placeholder.com/640x360.png?text=Demo+2",
+    "description": "Demo item 2 \u2014 replace these entries with your real items.",
+    "detail_url": "https://thesweetbeet.github.io/goofy-ticket.github.io/demo-2",
+    "episodes": [
+      {
+        "title": "Episode 1",
+        "stream": "https://test-streams.mux.dev/test_001/playlist.m3u8",
+        "stream_url": "https://test-streams.mux.dev/test_001/playlist.m3u8"
+      }
+    ],
+    "source_file": "/mnt/data/main.dart.js"
+  }
+]

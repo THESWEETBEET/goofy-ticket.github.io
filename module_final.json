@@ -1,0 +1,80 @@
+{
+  "name": "Goofy Ticket - Multipurpose (final)",
+  "developer": "You",
+  "version": "0.2",
+  "homepage": "https://thesweetbeet.github.io/goofy-ticket.github.io/",
+  "baseURL": "https://thesweetbeet.github.io/goofy-ticket.github.io/",
+  "search": {
+    "type": "json",
+    "description": "Primary: read from repo-hosted content.json. Fallback: basic HTML meta scraping.",
+    "raw_json": {
+      "url": "https://raw.githubusercontent.com/THESWEETBEET/goofy-ticket.github.io/main/content.json",
+      "results": {
+        "title": "$json:title",
+        "image": "$json:image",
+        "url": "$json:detail_url",
+        "description": "$json:description"
+      }
+    },
+    "inline_fallback": {
+      "results": [
+        {
+          "title": "Goofy Ticket \u2014 Demo Video 1",
+          "image": "https://via.placeholder.com/640x360.png?text=Demo+1",
+          "url": "https://thesweetbeet.github.io/goofy-ticket.github.io/demo-1",
+          "description": "Demo item 1 \u2014 replace these entries with your real items."
+        },
+        {
+          "title": "Goofy Ticket \u2014 Demo Video 2",
+          "image": "https://via.placeholder.com/640x360.png?text=Demo+2",
+          "url": "https://thesweetbeet.github.io/goofy-ticket.github.io/demo-2",
+          "description": "Demo item 2 \u2014 replace these entries with your real items."
+        }
+      ]
+    }
+  },
+  "info": {
+    "url": "{item_url}",
+    "json": {
+      "url": "{item_url}.json",
+      "title": "$json:title",
+      "image": "$json:image",
+      "description": "$json:description",
+      "episodes": {
+        "list": "$json:episodes",
+        "title": "$json:title",
+        "url": "$json:stream"
+      }
+    },
+    "html_fallback": {
+      "title": "meta[property='og:title'] @content",
+      "image": "meta[property='og:image'] @content",
+      "description": "meta[name='description'] @content",
+      "episodes": {
+        "list": ".episode, .ep",
+        "title": ".@text",
+        "url": "@href"
+      }
+    }
+  },
+  "stream": {
+    "type": "direct-or-m3u8",
+    "url": "{episode_url}",
+    "extractors": [
+      {
+        "type": "direct",
+        "path": "$json:stream_url"
+      },
+      {
+        "type": "m3u8",
+        "path": "$json:playlist"
+      }
+    ]
+  },
+  "notes": {
+    "how_to_test": "1) Commit content.json to the repo root. 2) Commit module.json to the repo root. 3) Use the raw URL for module.json in KETSU: https://raw.githubusercontent.com/THESWEETBEET/goofy-ticket.github.io/main/module.json",
+    "found_urls_count": 7,
+    "media_urls_count": 0,
+    "examples_found": []
+  }
+}
