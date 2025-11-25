@@ -1,0 +1,365 @@
+/* Hacker-esque Theme for Nginx Proxy Manager */
+/* Inject this via Custom Locations in NPM */
+
+:root {
+  --hacker-green: #00ff41;
+  --hacker-dark-bg: #0d0d0d;
+  --hacker-card-bg: #1a1a1a;
+}
+
+/* Body and base styles */
+body {
+  background: var(--hacker-dark-bg) !important;
+  color: var(--hacker-green) !important;
+  font-family: 'Courier New', monospace !important;
+}
+
+/* Cards */
+.card {
+  background: var(--hacker-card-bg) !important;
+  border: 1px solid rgba(0, 255, 65, 0.3) !important;
+  box-shadow: 0 0 10px rgba(0, 255, 65, 0.1) !important;
+  color: var(--hacker-green) !important;
+}
+
+.card-header {
+  background: rgba(0, 255, 65, 0.05) !important;
+  border-bottom: 1px solid rgba(0, 255, 65, 0.3) !important;
+  color: var(--hacker-green) !important;
+}
+
+.card-body {
+  color: var(--hacker-green) !important;
+}
+
+.card-title {
+  color: var(--hacker-green) !important;
+  text-shadow: 0 0 5px rgba(0, 255, 65, 0.2);
+}
+
+/* Tables */
+.table {
+  color: var(--hacker-green) !important;
+  border-color: rgba(0, 255, 65, 0.2) !important;
+}
+
+.table thead th {
+  border-color: rgba(0, 255, 65, 0.3) !important;
+  background: rgba(0, 255, 65, 0.05) !important;
+  color: var(--hacker-green) !important;
+}
+
+.table td, .table th {
+  border-color: rgba(0, 255, 65, 0.2) !important;
+  color: var(--hacker-green) !important;
+}
+
+.table-hover tbody tr:hover {
+  background: rgba(0, 255, 65, 0.05) !important;
+}
+
+/* Buttons */
+.btn-primary {
+  background: var(--hacker-green) !important;
+  border-color: var(--hacker-green) !important;
+  color: #000 !important;
+  font-weight: bold !important;
+  text-shadow: 0 0 5px rgba(0, 255, 65, 0.5) !important;
+}
+
+.btn-primary:hover, .btn-primary:focus {
+  background: #00cc33 !important;
+  border-color: #00cc33 !important;
+  box-shadow: 0 0 15px rgba(0, 255, 65, 0.5) !important;
+}
+
+.btn-secondary, .btn-outline-secondary {
+  background: transparent !important;
+  border-color: var(--hacker-green) !important;
+  color: var(--hacker-green) !important;
+}
+
+.btn-secondary:hover, .btn-outline-secondary:hover {
+  background: rgba(0, 255, 65, 0.1) !important;
+  box-shadow: 0 0 10px rgba(0, 255, 65, 0.3) !important;
+  color: var(--hacker-green) !important;
+}
+
+.btn-danger {
+  background: #ff0041 !important;
+  border-color: #ff0041 !important;
+  color: #000 !important;
+}
+
+.btn-success {
+  background: var(--hacker-green) !important;
+  border-color: var(--hacker-green) !important;
+  color: #000 !important;
+}
+
+/* Forms */
+.form-control, .form-select, select.form-control {
+  background: var(--hacker-card-bg) !important;
+  border: 1px solid rgba(0, 255, 65, 0.3) !important;
+  color: var(--hacker-green) !important;
+}
+
+.form-control:focus, .form-select:focus {
+  border-color: var(--hacker-green) !important;
+  box-shadow: 0 0 10px rgba(0, 255, 65, 0.3) !important;
+  background: var(--hacker-card-bg) !important;
+  color: var(--hacker-green) !important;
+}
+
+.form-control::placeholder {
+  color: rgba(0, 255, 65, 0.4) !important;
+}
+
+.form-label, label {
+  color: var(--hacker-green) !important;
+}
+
+/* Modals */
+.modal-content {
+  background: var(--hacker-card-bg) !important;
+  border: 1px solid var(--hacker-green) !important;
+  box-shadow: 0 0 30px rgba(0, 255, 65, 0.3) !important;
+  color: var(--hacker-green) !important;
+}
+
+.modal-header {
+  border-bottom-color: rgba(0, 255, 65, 0.3) !important;
+  background: rgba(0, 255, 65, 0.05) !important;
+}
+
+.modal-footer {
+  border-top-color: rgba(0, 255, 65, 0.3) !important;
+}
+
+.modal-title {
+  color: var(--hacker-green) !important;
+}
+
+.close {
+  color: var(--hacker-green) !important;
+  text-shadow: 0 0 5px rgba(0, 255, 65, 0.5) !important;
+}
+
+/* Navigation */
+.navbar, .header {
+  background: var(--hacker-card-bg) !important;
+  border-bottom: 1px solid var(--hacker-green) !important;
+  box-shadow: 0 2px 10px rgba(0, 255, 65, 0.2) !important;
+}
+
+.nav-link {
+  color: var(--hacker-green) !important;
+}
+
+.nav-link:hover {
+  color: #00cc33 !important;
+  text-shadow: 0 0 5px rgba(0, 255, 65, 0.5) !important;
+}
+
+.navbar-brand {
+  color: var(--hacker-green) !important;
+  text-shadow: 0 0 5px rgba(0, 255, 65, 0.3) !important;
+}
+
+/* Sidebar/Menu */
+.nav-tabs {
+  border-bottom: 1px solid rgba(0, 255, 65, 0.3) !important;
+}
+
+.nav-tabs .nav-link {
+  color: var(--hacker-green) !important;
+  border-color: transparent !important;
+}
+
+.nav-tabs .nav-link.active {
+  background: rgba(0, 255, 65, 0.1) !important;
+  border-color: rgba(0, 255, 65, 0.3) rgba(0, 255, 65, 0.3) transparent !important;
+  color: var(--hacker-green) !important;
+}
+
+/* Text */
+h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
+  color: var(--hacker-green) !important;
+  text-shadow: 0 0 5px rgba(0, 255, 65, 0.2) !important;
+}
+
+p, div, span, td, th, li {
+  color: var(--hacker-green) !important;
+}
+
+.text-muted {
+  color: rgba(0, 255, 65, 0.5) !important;
+}
+
+a {
+  color: var(--hacker-green) !important;
+}
+
+a:hover {
+  color: #00cc33 !important;
+  text-shadow: 0 0 5px rgba(0, 255, 65, 0.5) !important;
+}
+
+/* Badges */
+.badge {
+  background: rgba(0, 255, 65, 0.2) !important;
+  color: var(--hacker-green) !important;
+  border: 1px solid var(--hacker-green) !important;
+}
+
+.badge-success {
+  background: var(--hacker-green) !important;
+  color: #000 !important;
+}
+
+.badge-primary {
+  background: var(--hacker-green) !important;
+  color: #000 !important;
+}
+
+/* Alerts */
+.alert {
+  background: rgba(0, 255, 65, 0.1) !important;
+  border: 1px solid rgba(0, 255, 65, 0.3) !important;
+  color: var(--hacker-green) !important;
+}
+
+/* Dropdown */
+.dropdown-menu {
+  background: var(--hacker-card-bg) !important;
+  border: 1px solid rgba(0, 255, 65, 0.3) !important;
+}
+
+.dropdown-item {
+  color: var(--hacker-green) !important;
+}
+
+.dropdown-item:hover {
+  background: rgba(0, 255, 65, 0.1) !important;
+  color: var(--hacker-green) !important;
+}
+
+/* Pagination */
+.page-link {
+  background: var(--hacker-card-bg) !important;
+  border-color: rgba(0, 255, 65, 0.3) !important;
+  color: var(--hacker-green) !important;
+}
+
+.page-link:hover {
+  background: rgba(0, 255, 65, 0.1) !important;
+  color: var(--hacker-green) !important;
+}
+
+.page-item.active .page-link {
+  background: var(--hacker-green) !important;
+  border-color: var(--hacker-green) !important;
+  color: #000 !important;
+}
+
+/* Custom Switch */
+.custom-switch-input:checked ~ .custom-switch-indicator {
+  background: var(--hacker-green) !important;
+}
+
+/* Loader */
+.loader {
+  color: var(--hacker-green) !important;
+}
+
+/* Login page */
+.col-login {
+  background: var(--hacker-card-bg) !important;
+  border: 1px solid rgba(0, 255, 65, 0.3) !important;
+  box-shadow: 0 0 30px rgba(0, 255, 65, 0.2) !important;
+}
+
+/* Code blocks */
+pre, code {
+  background: var(--hacker-card-bg) !important;
+  color: var(--hacker-green) !important;
+  border: 1px solid rgba(0, 255, 65, 0.3) !important;
+}
+
+/* Scrollbars */
+::-webkit-scrollbar {
+  width: 12px;
+  height: 12px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--hacker-dark-bg);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--hacker-green);
+  border-radius: 6px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #00cc33;
+  box-shadow: 0 0 10px rgba(0, 255, 65, 0.5);
+}
+
+/* Input groups */
+.input-group-text {
+  background: rgba(0, 255, 65, 0.1) !important;
+  border-color: rgba(0, 255, 65, 0.3) !important;
+  color: var(--hacker-green) !important;
+}
+
+/* List groups */
+.list-group-item {
+  background: var(--hacker-card-bg) !important;
+  border-color: rgba(0, 255, 65, 0.3) !important;
+  color: var(--hacker-green) !important;
+}
+
+.list-group-item:hover {
+  background: rgba(0, 255, 65, 0.05) !important;
+}
+
+/* Progress bars */
+.progress {
+  background: var(--hacker-card-bg) !important;
+  border: 1px solid rgba(0, 255, 65, 0.3) !important;
+}
+
+.progress-bar {
+  background: var(--hacker-green) !important;
+  box-shadow: 0 0 10px rgba(0, 255, 65, 0.5) !important;
+}
+
+/* Breadcrumb */
+.breadcrumb {
+  background: rgba(0, 255, 65, 0.05) !important;
+}
+
+.breadcrumb-item {
+  color: var(--hacker-green) !important;
+}
+
+.breadcrumb-item.active {
+  color: rgba(0, 255, 65, 0.7) !important;
+}
+
+/* Icons - make them glow */
+i, .fe {
+  color: var(--hacker-green) !important;
+  filter: drop-shadow(0 0 2px rgba(0, 255, 65, 0.3));
+}
+
+/* Status indicators */
+.status-icon {
+  filter: drop-shadow(0 0 3px currentColor);
+}
+
+/* Glow effect on hover for interactive elements */
+.btn:hover, .card:hover, a:hover {
+  transition: all 0.3s ease;
+}
